@@ -5,13 +5,12 @@ function LayoutRow ({
         row,
         handleSquareClick,
         player,
-        gameState,
         setPlayer
     })
 {
     return (
         <div>
-            {row.map((square, squareIndex) => {
+            {row.map((square, squareIndex) => (
                 <Square
                     key={squareIndex}
                     index={squareIndex}
@@ -19,10 +18,9 @@ function LayoutRow ({
                     rowIndex={index}
                     handleSquareClick={handleSquareClick}
                     player={player}
-                    gameState={gameState}
                     setPlayer={setPlayer}
                 />
-            })}
+            ))}
         </div>
     )
 }
